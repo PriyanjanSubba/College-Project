@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background: url('./Images/HomeBg.png') no-repeat center center;
+    background-size: cover;
+}
+
+.content {
+    text-align: center;
+    background: rgba(255, 255, 255, 0);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.icon {
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+p {
+    font-size: 1.2em;
+    color: #555;
+}

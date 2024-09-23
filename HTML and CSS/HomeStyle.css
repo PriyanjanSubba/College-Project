@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('./Images/HomeBg.png') no-repeat center center;
+    background-size: cover; 
+    position: relative;
+    
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 800px;
+    margin-top: 90px;
+}
+
+.header h1, .header h2, .header p {
+    margin-bottom: 10px;
+}
+
+.header h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.header h2 {
+    font-size: 28px;
+    font-weight: normal;
+}
+
+.header p.subtext {
+    font-size: 18px;
+    color: #555;
+}
+
+.message-section {
+    margin: 20px 0;
+}
+
+.message-box {
+    background-color: rgba(255, 100, 100, 0.8);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.message-box p {
+    font-size: 20px;
+    color: #fff;
+}
+
+.message-box .signature {
+    font-size: 16px;
+    text-align: right;
+    color: #fff;
+}
+
+.send-wishes {
+    background-color: #666;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.photos-section {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.photos-section p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.get-photos {
+    background-color: #666;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}

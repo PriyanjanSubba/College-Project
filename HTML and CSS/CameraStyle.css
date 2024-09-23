@@ -1,0 +1,91 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body Background */
+body {
+    background: url('./Images/HomeBg.png') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container for the Selfie Interface */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Selfie Box Styling */
+.selfie-box {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    border: 3px solid #000000;
+}
+
+/* Selfie Header (Camera Icon and Text) */
+.selfie-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.selfie-header p {
+    font-size: 18px;
+    color: #555;
+    margin-left: 10px;
+}
+
+/* Camera Icon Styling */
+.camera-icon {
+    width: 32px;
+    height: 32px;
+}
+
+/* Selfie Preview Box (where video will appear) */
+.selfie-preview {
+    width: 250px;
+    height: 250px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    margin: 0 auto;
+    background-color: white;
+    margin-bottom: 15px;
+}
+
+/* Take Selfie Button */
+.selfie-button {
+    padding: 10px 20px;
+    background-color: #757575;
+    border: 2px solid #000000;
+    color: white;
+    border-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    margin: 0 auto;
+}
+
+.selfie-button img.camera-icon-small {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}

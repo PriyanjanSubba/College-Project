@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login&Register</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./Images/Favicon.jpg" type="image/x-icon">
+    <link rel="apple-touch-icon" href="./Images/Favicon.jpg">
+
+
+    <!-- CDN link for bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- CDN link for Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="Login&Register.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Left Section -->
+        <div class="left-section">
+
+            <img src="./Images/Login&RegisterBg.png" alt="Mountain View">
+
+        </div>
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <h2>Welcome</h2>
+            <form action="#" method="post">
+                <label for="name">Your Name*</label>
+                <input type="text" id="name" name="name" placeholder="eg. John Doe" required>
+
+                <label for="email">Email (Optional)</label>
+                <input type="email" id="email" name="email" placeholder="eg. JohnDoe@gmail.com">
+
+                <label for="whatsapp">WhatsApp number*</label>
+                <div class="phone-input">
+                    <select id="country-code" name="country-code" required>
+                        <option value="+977">+977 (Nepal)</option>  
+                        <option value="+91">+91 (India)</option>
+                        <option value="+1">+1 (USA)</option>
+                        <option value="+44">+44 (UK)</option>
+                        <option value="+61">+61 (Australia)</option>
+                        <option value="+81">+81 (Japan)</option>
+                        <option value="+49">+49 (Germany)</option>
+                        <option value="+33">+33 (France)</option>
+                        <!-- Add more country codes as needed -->
+                    </select>
+                    <hr>
+                    
+                    <input type="tel" id="whatsapp" name="whatsapp" placeholder="eg. 9800000000" required>
+                </div>
+
+                <div class="checkbox">
+                    <input type="checkbox" id="consent" name="consent" required>
+                    <label for="consent">I agree to the Terms of Service and consent to the use of AI facial recognition
+                        for photos.</label>
+                </div>
+
+                <button type="submit" class="take-selfie">Take Selfie</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- CDN JS for Boootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- CDN for Typed JS -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- Element to contain animated typing -->
+    <span id="element1"></span>
+    <span id="element2"></span>
+
+
+
+    <script>
+        
+        new Typed('#element1', {
+
+            strings: [' &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <b>Photo Organizer</b>'],
+            typeSpeed: 5,
+            backSpeed: 0,
+            
+            shuffle: true,
+            smartBackspace: false,
+            loop: false
+        });
+
+        
+
+        new Typed('#element2', {
+
+            strings: [' <br> Register your selfie, and well ensure that you <br>  receive all  of your photos. Powered by AI and <br> Face Recognition.'],
+            typeSpeed: 20,
+            backSpeed: 0,
+            
+            shuffle: true,
+            smartBackspace: false,
+            loop: false
+        });
+
+    </script>
+
+
+</body>
+
+</html>
