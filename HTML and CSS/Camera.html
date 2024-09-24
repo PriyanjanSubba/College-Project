@@ -10,17 +10,67 @@
     <div class="container">
         <div class="selfie-box">
             <div class="selfie-header">
-                <img src="./Images/Camera.png "alt="Camera" class="camera-icon" style="background: #ffffff">
+                <img src="./Images/Camera.png" alt="Camera" class="camera-icon" style="background: #ffffff">
                 <p>Take a Selfie</p>
             </div>
             <div class="selfie-preview">
-                <!-- Selfie video preview goes here -->
+                <video id="video" autoplay playsinline></video>
+                <canvas id="canvas" style="display:none;"></canvas>
             </div>
-            <button class="selfie-button">
+            <button id="takeSelfie" class="selfie-button">
                 <img src="./Images/Selfie Camera.png" alt="camera-icon" class="camera-icon-small">
                 Take Selfie
             </button>
         </div>
     </div>
+
+    <script>
+        const video = document.getElementById('video');
+        const canvas = document.getElementById('canvas');
+        const takeSelfieButton = document.getElementById('takeSelfie');
+        const selfiePreview = document.querySelector('.selfie-preview');
+        
+        // Access the webcam and display the video
+        navigator.mediaDevices.getUserMedia({ video: { facingMode: 'user' } })
+            .then(stream => {
+                video.srcObject = stream;
+            })
+            .catch(error => {
+                console.error('Error accessing webcam:', error);
+            });
+
+        // Ensure the video fits within the .selfie-preview container
+        video.addEventListener('loadedmetadata', () => {
+            let previewWidth = selfiePreview.offsetWidth;
+            let previewHeight = selfiePreview.offsetHeight;
+            
+            video.width = previewWidth;
+            video.height = previewHeight;
+            
+            video.style.width = '100%';
+            video.style.height = '100%';
+            video.style.objectFit = 'cover';  // Ensures the video fits within the container, cropping as needed
+            
+            // Mirror the video to correct inversion
+            video.style.transform = 'scaleX(-1)';  // This mirrors the video horizontally
+        });
+
+        // Take a selfie and redirect after capture
+        takeSelfieButton.addEventListener('click', () => {
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+
+            // Draw the video frame to the canvas (mirrored)
+            const context = canvas.getContext('2d');
+            context.scale(-1, 1);  // Mirror the image on the canvas as well
+            context.drawImage(video, -canvas.width, 0, canvas.width, canvas.height);
+
+            // Convert canvas to image (optional use)
+            const imageDataURL = canvas.toDataURL('image/png');
+
+            // Redirect to ThankYou.html after capturing the selfie
+            window.location.href = "ThankYou.html";
+        });
+    </script>
 </body>
 </html>
