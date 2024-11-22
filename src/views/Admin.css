@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  .dashboard-container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 250px;
+    background: linear-gradient(45deg, #1abc9c, #16a085);
+    color: white;
+    padding: 20px;
+    position: fixed;
+    transition: all 0.3s ease;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sidebar h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+  }
+  
+  .sidebar ul li {
+    margin-bottom: 20px;
+  }
+  
+  .sidebar ul li a {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
+  
+  .sidebar ul li a i {
+    margin-right: 10px;
+  }
+  
+  .sidebar ul li a:hover {
+    background-color: #2ecc71;
+  }
+  
+  /* Main Content */
+  .main-content {
+    margin-left: 250px;
+    padding: 30px;
+    width: calc(100% - 250px);
+  }
+  
+  .content-section {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .content-section h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  #upload-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+  
+  #upload-form label {
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  #upload-form input[type="file"] {
+    margin-bottom: 20px;
+  }
+  
+  #upload-form button {
+    padding: 12px;
+    background-color: #1abc9c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #upload-form button:hover {
+    background-color: #16a085;
+  }
+  
+  /* Uploaded Photos Grid */
+  .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+  }
+  
+  .photo-grid img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .photo-grid img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* User Table */
+  .user-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }A
+  
+  .user-table th, .user-table td {
+    padding: 15px;
+    border: 1px solid #eee;
+  }
+  
+  .user-table th {
+    background-color: #f9f9f9;
+    text-align: left;
+  }
+  
+  .user-table button {
+    padding: 8px 12px;
+    margin-right: 5px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .user-table .delete-btn {
+    background-color: #e74c3c;
+  }
+  
+  .user-table button:hover {
+    background-color: #2980b9;
+  }
+  
+  .user-table .delete-btn:hover {
+    background-color: #c0392b;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .sidebar {
+      width: 200px;
+    }
+  
+    .main-content {
+      margin-left: 200px;
+      padding: 20px;
+    }
+  
+    .photo-grid {
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+  }
+  
+  /* User Table */
+  .user-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .user-table th, .user-table td {
+    padding: 15px;
+    border: 1px solid #eee;
+  }
+  
+  .user-table th {
+    background-color: #f9f9f9;
+    text-align: left;
+  }
+  
+  .user-table button {
+    padding: 8px 12px;
+    margin-right: 5px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .user-table .delete-btn {
+    background-color: #e74c3c;
+  }
+  
+  .user-table button:hover {
+    background-color: #2980b9;
+  }
+  
+  .user-table .delete-btn:hover {
+    background-color: #c0392b;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .sidebar {
+      width: 200px;
+    }
+  
+    .main-content {
+      margin-left: 200px;
+      padding: 20px;
+    }
+  
+    .photo-grid {
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+  }
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    width: 400px;
+    border-radius: 8px;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover, .close:focus {
+    color: black;
+    cursor: pointer;
+  }
+  
+  /* Progress bar styles */
+  #progress-container {
+    margin-top: 20px;
+  }
+  
+  #progress-bar {
+    width: 100%;
+    height: 20px;
+  }
+  
+  #progress-status {
+    font-size: 14px;
+    margin-left: 10px;
+  }
+  
+  
+  
+  
